@@ -1,10 +1,7 @@
 import React from "react";
 import { Facebook, Instagram, Linkedin, MapPin, Phone, Mail } from "lucide-react";
-import { useCookieConsent } from "../../context/CookieContext";
 
 const Footer: React.FC = () => {
-  const { resetConsent } = useCookieConsent();
-
   return (
     <footer className="bg-gray-50 border-t border-lavender-light/30 py-16">
       <div className="container mx-auto px-4 md:px-6">
@@ -88,7 +85,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center space-x-3 text-sm text-gray-primary">
                 <Mail className="w-5 h-5 text-lavender shrink-0" />
-                <a href="mailto:info@primadent-zahntechnik.de" className="hover:text-lavender transition-colors">info@primadent-zahntechnik.de</a>
+                <a href="mailto:info@zahnkunst24.de" className="hover:text-lavender transition-colors">info@zahnkunst24.de</a>
               </li>
             </ul>
           </div>
@@ -100,13 +97,6 @@ const Footer: React.FC = () => {
             <a href="/impressum" className="hover:text-lavender transition-colors">Impressum</a>
             <a href="/datenschutz" className="hover:text-lavender transition-colors">Datenschutz</a>
             <a href="/agb" className="hover:text-lavender transition-colors">AGB</a>
-            <button 
-                onClick={resetConsent} 
-                className="hover:text-lavender transition-colors text-left focus:outline-none"
-                aria-label="Cookie Einstellungen öffnen"
-            >
-                Cookie-Einstellungen
-            </button>
           </div>
         </div>
       </div>

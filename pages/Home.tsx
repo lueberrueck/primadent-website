@@ -1039,13 +1039,13 @@ const Home: React.FC = () => {
                   <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </a>
-              <a href="tel:+4952218799670">
+              <a href="tel:+49522150742">
                 <Button
                   size="lg"
                   variant="outline"
                   className="border-white/30 text-white hover:bg-white/10 text-base px-8"
                 >
-                  05221 879 967 0
+                  05221 50742
                 </Button>
               </a>
             </div>

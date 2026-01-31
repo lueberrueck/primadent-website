@@ -26,34 +26,15 @@ const Impressum: React.FC = () => {
             <section>
               <h2 className="text-xl font-bold text-gray-700 mb-2">Kontakt</h2>
               <p>
-                Telefon: +49 (0) 30 123 456<br />
-                Fax: +49 (0) 30 123 457<br />
-                E-Mail: info@primadent.de
+                Telefon: +49 (0) 5221 50742<br />
+                E-Mail: info@zahnkunst24.de
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-700 mb-2">Vertreten durch</h2>
+              <h2 className="text-xl font-bold text-gray-700 mb-2">Zuständige Kammer</h2>
               <p>
-                Geschäftsführer: Thomas Müller<br />
-                Zahntechnikermeister
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold text-gray-700 mb-2">Registereintrag</h2>
-              <p>
-                Eintragung im Handelsregister.<br />
-                Registergericht: Amtsgericht Herford<br />
-                Registernummer: HRB 12345
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold text-gray-700 mb-2">Umsatzsteuer-ID</h2>
-              <p>
-                Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-                DE 123 456 789
+                Handwerkskammer Ostwestfalen-Lippe zu Bielefeld
               </p>
             </section>
 

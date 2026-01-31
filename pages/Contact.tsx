@@ -1,11 +1,21 @@
-import React from "react";
-import { MapPin, Phone, Mail, Clock, Lock } from "lucide-react";
+import React, { useState } from "react";
+import { MapPin, Phone, Mail, Clock, MapPinned } from "lucide-react";
 import { Card } from "../components/ui/Card";
 import { Button } from "../components/ui/Button";
-import { useCookieConsent } from "../context/CookieContext";
 
 const Contact: React.FC = () => {
-  const { consent, acceptCookies } = useCookieConsent();
+  // 2-Click Lösung: Lokaler State nur für Maps
+  const [mapsAccepted, setMapsAccepted] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('primadent-maps-consent') === 'accepted';
+    }
+    return false;
+  });
+
+  const acceptMaps = () => {
+    setMapsAccepted(true);
+    localStorage.setItem('primadent-maps-consent', 'accepted');
+  };
 
   return (
     <div className="bg-slate-50 min-h-screen py-24">
@@ -39,14 +49,11 @@ const Contact: React.FC = () => {
                 <Phone size={28} />
               </div>
               <div>
-                <h3 className="font-bold text-xl text-gray-700 mb-3">Telefon & Fax</h3>
+                <h3 className="font-bold text-xl text-gray-700 mb-3">Telefon</h3>
                 <div className="text-gray-primary leading-relaxed text-lg">
-                  <a href="tel:+4930123456" className="hover:text-lavender transition-colors block font-medium mb-1">
-                    Tel: +49 (0) 30 123 456
+                  <a href="tel:+49522150742" className="hover:text-lavender transition-colors block font-medium mb-1">
+                    Tel: +49 (0) 5221 50742
                   </a>
-                  <span className="block text-gray-400">
-                    Fax: +49 (0) 30 123 457
-                  </span>
                 </div>
               </div>
             </Card>
@@ -58,11 +65,8 @@ const Contact: React.FC = () => {
               <div>
                 <h3 className="font-bold text-xl text-gray-700 mb-3">E-Mail</h3>
                 <div className="text-gray-primary leading-relaxed text-lg">
-                  <a href="mailto:info@primadent.de" className="hover:text-lavender transition-colors block mb-1">
-                    info@primadent.de
-                  </a>
-                  <a href="mailto:labor@primadent.de" className="hover:text-lavender transition-colors block text-gray-500 text-base">
-                    labor@primadent.de
+                  <a href="mailto:info@zahnkunst24.de" className="hover:text-lavender transition-colors block mb-1">
+                    info@zahnkunst24.de
                   </a>
                 </div>
               </div>
@@ -92,10 +96,10 @@ const Contact: React.FC = () => {
             </Card>
         </div>
         
-        {/* Map Section with Cookie Consent Logic */}
+        {/* Map Section with 2-Click Solution */}
         <div className="max-w-5xl mx-auto">
-            <div className="rounded-3xl overflow-hidden h-[450px] bg-gray-200 relative border-4 border-white shadow-2xl transition-all">
-                {consent === 'accepted' ? (
+            <div className="rounded-3xl overflow-hidden h-[450px] bg-gray-100 relative border-4 border-white shadow-2xl transition-all">
+                {mapsAccepted ? (
                    <iframe 
                      width="100%" 
                      height="100%" 
@@ -104,24 +108,30 @@ const Contact: React.FC = () => {
                      allowFullScreen 
                      referrerPolicy="no-referrer-when-downgrade"
                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2420.9675999649813!2d8.668641076686557!3d52.11444497202099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ba3d1b1b1b1b1b%3A0x1b1b1b1b1b1b1b1b!2sSch%C3%BCtzenstra%C3%9Fe%204%2C%2032049%20Herford!5e0!3m2!1sde!2sde!4v1700000000000!5m2!1sde!2sde"
-                     title="Google Maps PrimaDent Standort"
+                     title="Google Maps - PrimaDent Standort Schützenstraße 4, Herford"
                    ></iframe>
                 ) : (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-500 p-6 text-center">
-                      <div className="bg-lavender-pale p-4 rounded-full mb-4">
-                        <Lock size={32} className="text-lavender" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-slate-50 to-lavender-pale/20 text-gray-500 p-6 text-center">
+                      <div className="bg-lavender-pale p-5 rounded-2xl mb-5">
+                        <MapPinned size={40} className="text-lavender" />
                       </div>
-                      <h3 className="font-bold text-xl text-gray-700 mb-2">Karte deaktiviert</h3>
-                      <p className="max-w-md mb-6 text-gray-primary">
-                        Aus Datenschutzgründen (DSGVO) ist Google Maps standardmäßig deaktiviert. 
-                        Um die Karte anzuzeigen, stimmen Sie bitte der Nutzung von Cookies zu.
+                      <h3 className="font-bold text-xl text-gray-800 mb-2">Google Maps</h3>
+                      <p className="max-w-md mb-6 text-gray-600 leading-relaxed">
+                        Durch Klick auf den Button wird eine Verbindung zu Google Maps hergestellt. 
+                        Dabei werden Daten (z.B. Ihre IP-Adresse) an Google übertragen.
                       </p>
-                      <Button onClick={acceptCookies} className="shadow-lg shadow-lavender/20">
-                        Karte aktivieren & Cookies akzeptieren
+                      <Button onClick={acceptMaps} className="shadow-lg shadow-lavender/20">
+                        <MapPinned size={18} className="mr-2" />
+                        Karte laden
                       </Button>
-                      <p className="text-xs text-gray-400 mt-4 max-w-xs">
-                        Durch Aktivieren der Karte werden Daten an Google übertragen.
-                      </p>
+                      <a 
+                        href="https://www.google.com/maps/place/Schützenstraße+4,+32049+Herford" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-sm text-lavender hover:underline mt-4"
+                      >
+                        Oder direkt in Google Maps öffnen →
+                      </a>
                   </div>
                 )}
             </div>

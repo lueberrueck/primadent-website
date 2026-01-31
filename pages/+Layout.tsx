@@ -1,9 +1,7 @@
-// Globales Layout für alle Seiten (Navbar, Footer, Cookie-Banner)
+// Globales Layout für alle Seiten (Navbar, Footer)
 import React, { useEffect } from 'react';
 import { usePageContext } from 'vike-react/usePageContext';
 import '../index.css'; // Tailwind CSS importieren
-import { CookieProvider } from '../context/CookieContext';
-import { CookieBanner } from '../components/ui/CookieBanner';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 
@@ -20,20 +18,17 @@ function ScrollToTop() {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <CookieProvider>
-      <html lang="de">
-        <body>
-          <ScrollToTop />
-          <div className="flex flex-col min-h-screen">
-            <Navbar />
-            <main className="flex-grow pt-16">
-              {children}
-            </main>
-            <Footer />
-            <CookieBanner />
-          </div>
-        </body>
-      </html>
-    </CookieProvider>
+    <html lang="de">
+      <body>
+        <ScrollToTop />
+        <div className="flex flex-col min-h-screen">
+          <Navbar />
+          <main className="flex-grow pt-16">
+            {children}
+          </main>
+          <Footer />
+        </div>
+      </body>
+    </html>
   );
 }

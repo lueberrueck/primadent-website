@@ -27,7 +27,7 @@ const Datenschutz: React.FC = () => {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-700 mb-4">2. Hosting und Content Delivery Networks (CDN)</h2>
+              <h2 className="text-xl font-bold text-gray-700 mb-4">2. Hosting</h2>
               <p>
                 Wir hosten die Inhalte unserer Website bei einem externen Anbieter. Personenbezogene Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.
               </p>
@@ -45,18 +45,19 @@ const Datenschutz: React.FC = () => {
                 PrimaDent Zahntechnik<br />
                 Schützenstraße 4<br />
                 32049 Herford<br />
-                E-Mail: info@primadent.de
+                Telefon: +49 (0) 5221 50742<br />
+                E-Mail: info@zahnkunst24.de
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-bold text-gray-700 mb-4">4. Datenerfassung auf dieser Website</h2>
-              <h3 className="font-bold mb-2">Cookies</h3>
+              <h3 className="font-bold mb-2">Technisch notwendige Daten</h3>
               <p className="mb-4">
-                Unsere Internetseiten verwenden so genannte „Cookies“. Cookies sind kleine Textdateien und richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endgerät gespeichert.
+                Beim Besuch unserer Website werden automatisch technische Daten (z.B. IP-Adresse, Browser-Typ, Betriebssystem) durch unseren Hosting-Anbieter erfasst. Diese Daten sind für den Betrieb der Website technisch notwendig und werden nach 7 Tagen automatisch gelöscht.
               </p>
               <p className="mb-4">
-                Wir setzen ein Consent-Management-Tool ein, um Ihre Einwilligung zur Speicherung bestimmter Cookies auf Ihrem Endgerät einzuholen und diese datenschutzkonform zu dokumentieren.
+                Diese Website verwendet keine Tracking-Cookies und setzt keine Analyse-Tools ein. Lediglich für technisch notwendige Funktionen können Session-Cookies verwendet werden, die nach dem Schließen des Browsers automatisch gelöscht werden.
               </p>
 
               <h3 className="font-bold mb-2">Kontaktanfragen</h3>
@@ -66,16 +67,45 @@ const Datenschutz: React.FC = () => {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-700 mb-4">5. Plugins und Tools</h2>
-              <h3 className="font-bold mb-2">Google Maps</h3>
+              <h2 className="text-xl font-bold text-gray-700 mb-4">5. Externe Dienste und 2-Klick-Lösung</h2>
+              <h3 className="font-bold mb-2">Google Maps (2-Klick-Lösung)</h3>
               <p className="mb-4">
-                Diese Seite nutzt den Kartendienst Google Maps. Anbieter ist die Google Ireland Limited („Google“), Gordon House, Barrow Street, Dublin 4, Irland.
+                Diese Seite nutzt den Kartendienst Google Maps. Anbieter ist die Google Ireland Limited („Google"), Gordon House, Barrow Street, Dublin 4, Irland.
               </p>
               <p className="mb-4">
-                Zur Nutzung der Funktionen von Google Maps ist es notwendig, Ihre IP-Adresse zu speichern. Diese Informationen werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Der Anbieter dieser Seite hat keinen Einfluss auf diese Datenübertragung. Wenn Google Maps aktiviert ist, kann Google zum Zwecke der einheitlichen Darstellung der Schriftarten Google Web Fonts verwenden. Beim Aufruf von Google Maps lädt Ihr Browser die benötigten Web Fonts in ihren Browsercache, um Texte und Schriftarten korrekt anzuzeigen.
+                <strong>Wir setzen eine datenschutzfreundliche 2-Klick-Lösung ein:</strong> Die Google Maps-Karte wird erst geladen, nachdem Sie aktiv auf den Button „Karte laden" geklickt haben. Erst durch Ihren Klick wird eine Verbindung zu den Servern von Google hergestellt und Daten übertragen. Ohne Ihre aktive Einwilligung werden keine Daten an Google gesendet.
+              </p>
+              <p className="mb-4">
+                Zur Nutzung der Funktionen von Google Maps ist es notwendig, Ihre IP-Adresse zu speichern. Diese Informationen werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Der Anbieter dieser Seite hat keinen Einfluss auf diese Datenübertragung.
+              </p>
+              <p className="mb-4">
+                Die Nutzung von Google Maps erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote und an einer leichten Auffindbarkeit der von uns auf der Website angegebenen Orte. Die Einbindung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO (Einwilligung), die Sie durch Klick auf „Karte laden" erteilen.
               </p>
               <p>
-                Die Nutzung von Google Maps erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote und an einer leichten Auffindbarkeit der von uns auf der Website angegebenen Orte. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO; die Einwilligung ist jederzeit widerrufbar.
+                Weitere Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von Google unter: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-lavender hover:underline">https://policies.google.com/privacy</a>
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold text-gray-700 mb-4">6. Ihre Rechte</h2>
+              <p className="mb-4">
+                Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung oder Löschung dieser Daten.
+              </p>
+              <p>
+                Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit an uns wenden.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold text-gray-700 mb-4">7. Streitschlichtung</h2>
+              <p className="mb-4">
+                Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: 
+                <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" className="text-lavender hover:underline ml-1">
+                  https://ec.europa.eu/consumers/odr
+                </a>
+              </p>
+              <p>
+                Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
               </p>
             </section>
           </div>
