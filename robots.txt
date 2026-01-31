@@ -1,0 +1,6 @@
+# robots.txt für PrimaDent Zahntechnik
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.primadent-zahntechnik.de/sitemap.xml
