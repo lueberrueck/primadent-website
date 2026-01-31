@@ -57,7 +57,7 @@ const services: ServiceItem[] = [
 ];
 
 const collageItems = [
-  { src: "./Labor1.webp", title: "CAD/CAM Präzisionsarbeit", alt: "Modernes CAD/CAM Labor bei PrimaDent Herford", span: "md:col-span-2 md:row-span-2" },
+  { src: "./Eingang.webp", title: "CAD/CAM Präzisionsarbeit", alt: "Modernes CAD/CAM Labor bei PrimaDent Herford", span: "md:col-span-2 md:row-span-2" },
   { src: "./Zahn.webp", title: "Vollkeramik Zahnersatz", alt: "Hochwertige Vollkeramik Krone vom Dentallabor", span: "md:col-span-1 md:row-span-1" },
   { src: "./Labor2.webp", title: "Digitaler Workflow", alt: "Digitale Zahntechnik Arbeitsplatz", span: "md:col-span-1 md:row-span-1" },
   { src: "./Blumen.webp", title: "Willkommen bei PrimaDent", alt: "PrimaDent Dentallabor Empfangsbereich", span: "md:col-span-1 md:row-span-1" },
@@ -255,7 +255,7 @@ const Services: React.FC = () => {
             >
               <div className="absolute -inset-4 bg-gradient-to-br from-lavender/20 to-lavender-pale/30 rounded-[2rem] transform -rotate-2" />
               <img 
-                src="./Labor1.webp" 
+                src="./Eingang.webp" 
                 alt="Digitaler Workflow im Dentallabor PrimaDent - CAD/CAM Fertigung" 
                 className="relative z-10 rounded-3xl shadow-2xl w-full aspect-square object-cover"
                 loading="lazy"

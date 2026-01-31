@@ -247,7 +247,7 @@ const Home: React.FC = () => {
       title: "",
     },
     {
-      src: "./Labor1.webp",
+      src: "./Eingang.webp",
       alt: "Laboransicht 1",
       span: "md:col-span-1 md:row-span-1",
       title: "Laborseite 1",
@@ -441,7 +441,7 @@ const Home: React.FC = () => {
                 {/* Main Image */}
                 <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl shadow-lavender/20">
                   <img
-                    src="./Labor1.webp"
+                    src="./Eingang.webp"
                     alt="Modernes Zahnlabor mit CAD/CAM Technologie"
                     className="w-full aspect-[4/3] object-cover"
                   />
