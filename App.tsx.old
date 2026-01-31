@@ -1,0 +1,51 @@
+import React, { useEffect } from 'react';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import Home from './pages/Home';
+import Services from './pages/Services';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Impressum from './pages/Impressum';
+import Datenschutz from './pages/Datenschutz';
+import AGB from './pages/AGB';
+import { CookieProvider } from './context/CookieContext';
+import { CookieBanner } from './components/ui/CookieBanner';
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
+const App: React.FC = () => {
+  return (
+    <CookieProvider>
+      <HashRouter>
+        <div className="flex flex-col min-h-screen">
+          <ScrollToTop />
+          <Navbar />
+          <main className="flex-grow pt-16">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/leistungen" element={<Services />} />
+              <Route path="/ueber-uns" element={<About />} />
+              <Route path="/kontakt" element={<Contact />} />
+              <Route path="/impressum" element={<Impressum />} />
+              <Route path="/datenschutz" element={<Datenschutz />} />
+              <Route path="/agb" element={<AGB />} />
+            </Routes>
+          </main>
+          <Footer />
+          <CookieBanner />
+        </div>
+      </HashRouter>
+    </CookieProvider>
+  );
+};
+
+export default App;

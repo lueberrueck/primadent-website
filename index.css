@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter.woff2") format("woff2");
+  font-weight: 100 900; /* anpassen je nach Datei */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/fonts/Outfit.woff2") format("woff2");
+  font-weight: 300 700; /* anpassen je nach Datei */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Tailwind 4 Theme */
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-heading: "Outfit", system-ui, sans-serif;
+
+  --color-lavender-light: #D0D0EA;
+  --color-lavender: #9370DB;
+  --color-lavender-pale: #E8E8F5;
+  --color-lavender-dark: #7B68EE;
+  --color-gray-primary: #737373;
+  --color-gray-dark: #1F1F1F;
+}
+
+/* optional deine globalen Styles */
+body {
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Outfit", sans-serif;
+}

@@ -1,0 +1,21 @@
+# robots.txt für PrimaDent Zahntechnik
+# https://www.primadent-zahntechnik.de
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.primadent-zahntechnik.de/sitemap.xml
+
+# Blockiere Admin-Bereiche und sensible Dateien
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /assets/*.js.map
+
+# Erlaube alle wichtigen Seiten
+Allow: /leistungen
+Allow: /ueber-uns
+Allow: /kontakt
+Allow: /impressum
+Allow: /datenschutz
+Allow: /agb
